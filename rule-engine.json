@@ -1,0 +1,147 @@
+{
+	"conditions": {
+	  "any": [{
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "NY"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "65"
+		}]
+	  }, {
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "DE"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "65"
+		}]
+	  }, {
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "DE"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "18"
+		}, {
+		  "fact": "occupationCode",
+		  "operator": "in",
+		  "value": ["Health Care Worker", "Long Term Care Facility Staff", "Public Health Employee", "Pharmacy Staff"]
+		}]
+	  }, {
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "CA"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "65"
+		}]
+	  }, {
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "CA"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "18"
+		}, {
+		  "fact": "occupationCode",
+		  "operator": "in",
+		  "value": ["Health Care Worker", "Long Term Care Facility Staff", "Public Health Employee", "Pharmacy Staff"]
+		}]
+	  }, {
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "PA"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "65"
+		},
+		{
+		  "fact": "city",
+		  "operator": "notIn",
+		  "value": ["Philadelphia", "philadelphia", "PHILADELPHIA","Philly","PHILLY","philly"]
+		}]
+	  },{
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "PA"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "75"
+		},
+		{
+		  "fact": "city",
+		  "operator": "in",
+		  "value": ["Philadelphia", "philadelphia", "PHILADELPHIA","Philly","PHILLY","philly"]
+		}]
+	  }, {
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "PA"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "18"
+		}, {
+		  "fact": "occupationCode",
+		  "operator": "in",
+		  "value": ["Health Care Worker", "Long Term Care Facility Staff", "Public Health Employee", "Pharmacy Staff"]
+		},		
+		{
+		  "fact": "city",
+		  "operator": "notIn",
+		  "value": ["Philadelphia", "philadelphia", "PHILADELPHIA","Philly","PHILLY","philly"]
+		}]
+	  }, {
+		"all": [{
+		  "fact": "stateCode",
+		  "operator": "equal",
+		  "value": "PA"
+		}, {
+		  "fact": "age",
+		  "operator": "greaterThanInclusive",
+		  "value": "18"
+		}, {
+		  "fact": "medicalConditionCode",
+		  "operator": "in",
+		  "value": ["Obesity", "Diabetes", "Heart Condition", "Sickle Cell Anemia", "Smoking", "Organ transplant", "Kidney Disease", "COPD", "Cancer", "Down Syndrome", "HIV", "Weakened Immune System", "Pregnancy"]
+		},
+		{
+		  "fact": "city",
+		  "operator": "notIn",
+		  "value": ["Philadelphia", "philadelphia", "PHILADELPHIA","Philly","PHILLY","philly"]
+		}]
+	  }, {
+		"all": [{
+			"fact": "stateCode",
+			"operator": "equal",
+			"value": "MD"
+		  }, {
+			"fact": "age",
+			"operator": "greaterThanInclusive",
+			"value": "18"
+		  }]
+	  } ]
+	},
+	"event": {  
+	  "type": "qualifiedUser",
+	  "params": {
+		"message": "You qualified for vaccine!"
+	  }
+	}
+}
